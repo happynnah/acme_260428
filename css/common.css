@@ -34,8 +34,9 @@
 }
 
 body{
-  font-family: "Open Sans", sans-serif;
-  font-size: var(--base-font);
+  /* font-family: "Open Sans", sans-serif;
+  font-size: var(--base-font); */
+  font: var(--base-font)/var(--base-unit) "Open Sans", sans-serif;
 }
 
 /* 폰트 위계 */
@@ -152,7 +153,7 @@ body > header{
   box-shadow: 0 4px 5px rgba(0,0,0,.1);
 }
 
-h1 span{
+.hidden{
   position: absolute;
   clip-path: inset(50%);
   width: 1px; height: 1px;
@@ -165,4 +166,3 @@ header nav ul{
 header nav ul li:first-child{
   margin-right: 40px;
 }
-

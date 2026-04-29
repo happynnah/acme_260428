@@ -146,6 +146,12 @@ form button{
   padding-top: calc(var(--base-unit) * 3);
 }
 
+hr{
+  border:none;
+  height: 1px;
+  background: var(--super--light--gray);
+}
+
 /* 헤더 */
 body > header{
   background: var(--white);

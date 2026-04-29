@@ -4,7 +4,8 @@
 :root{
   /* Layout */
   --base-unit:27px;
-  
+  --base-font:16px;
+
   /* Color styles */
   --black: rgba(44, 44, 44, 1);
   --light--gray: rgba(168, 168, 168, 1);
@@ -33,4 +34,85 @@
 
 body{
   font-family: "Open Sans", sans-serif;
+  font-size: var(--base-font);
+}
+
+/* 폰트 위계 */
+.text-heading-xl{
+  font-size: 55px;
+  line-height: calc(var(--base-unit) * 3 );
+}
+.text-heading-s{
+  font-size: 24px;
+  line-height: var(--base-unit);
+}
+.text-body-l{
+  font-size: 32px;
+  line-height: calc(var(--base-unit) * 2 );
+}
+.text-body-m{
+  font-size: 16px;
+  line-height: var(--base-unit);
+}
+.text-body-m-plus{
+  font-size: 18px;
+  line-height: var(--base-unit);
+}
+
+/* 링크 버튼 */
+.btn{
+  height: 39px;
+  background-color: var(--super--light--gray);
+  border-radius: 3px;
+  padding: 0 20px;
+  display: inline-flex;
+  color: var(--medium--gray);
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  gap: 5px;
+  text-transform: uppercase;
+}
+.btn-primary{
+  background: var(--primary);
+  color: var(--secondary);
+}
+/* 폼 요소 */
+.hero{
+  background: var(--hero);
+}
+form{
+  width: 350px;  
+  display: flex;
+  flex-direction:column;
+  gap:10px;
+}
+form .field{
+  height: calc(var(--base-unit) * 2);
+  background: var(--white);
+  border-radius: 3px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  color: var(--light--gray);
+}
+form .field input{
+  font-style: italic;
+  color: var(--black)
+}
+form .field input::placeholder{
+  color:var(--light--gray);
+}
+form button{
+  height: calc(var(--base-unit) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  color: var(--white);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
 }

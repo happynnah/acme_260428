@@ -42,6 +42,9 @@ body{
 .text-heading-xl{
   font-size: 55px;
   line-height: calc(var(--base-unit) * 3 );
+  color: var(--hero--title);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .text-heading-s{
   font-size: 24px;
@@ -50,6 +53,7 @@ body{
 .text-body-l{
   font-size: 32px;
   line-height: calc(var(--base-unit) * 2 );
+  font-weight: 300;
 }
 .text-body-m{
   font-size: 16px;
@@ -85,6 +89,10 @@ body{
 .btn-primary{
   background: var(--primary);
   color: var(--secondary);
+}
+.btn.big{
+  height: calc(var(--base-unit) * 2);
+  padding: 0 30px;
 }
 /* 폼 요소 */
 .hero{

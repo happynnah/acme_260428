@@ -59,6 +59,11 @@ body{
   font-size: 18px;
   line-height: var(--base-unit);
 }
+.text-nav{
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 /* 링크 버튼 */
 .btn{
@@ -73,6 +78,9 @@ body{
   font-weight: bold;
   gap: 5px;
   text-transform: uppercase;
+}
+.btn .material-icons{
+  font-size: 14px;
 }
 .btn-primary{
   background: var(--primary);
@@ -130,3 +138,23 @@ form button{
 }
 
 /* 헤더 */
+body > header{
+  background: var(--white);
+  padding: var(--base-unit) 0;
+  box-shadow: 0 4px 5px rgba(0,0,0,.1);
+}
+
+h1 span{
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
+header nav ul{
+  gap: 10px;
+}
+
+header nav ul li:first-child{
+  margin-right: 40px;
+}
+

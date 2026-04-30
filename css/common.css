@@ -61,10 +61,13 @@ body {
 .text-body-m {
   font-size: 16px;
   line-height: var(--base-unit);
+  text-align: center;
 }
 .text-body-m-plus {
   font-size: 18px;
   line-height: var(--base-unit);
+  text-align: center;
+  color: var(--light--gray);
 }
 .text-nav {
   font-size: 14px;
@@ -186,6 +189,7 @@ header nav ul li:first-child {
   width: 300%;
   display: flex;
   transition: 0.3s ease-out;
+  transform: translateX(-1272px);
 }
 
 .slidecontainer li {
@@ -213,4 +217,13 @@ header nav ul li:first-child {
 }
 .slidewrapper button.next {
   right: 0;
+}
+
+/* CTA */
+.cta {
+  background: var(--c-t-a);
+}
+
+.cta h3 {
+  color: var(--light--gray);
 }

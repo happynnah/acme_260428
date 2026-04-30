@@ -1,11 +1,11 @@
-@import url('normalize.css');
-@import url('reset.css');
-@import url('flex-utility.css');
+@import url("normalize.css");
+@import url("reset.css");
+@import url("flex-utility.css");
 
-:root{
+:root {
   /* Layout */
-  --base-unit:27px;
-  --base-font:16px;
+  --base-unit: 27px;
+  --base-font: 16px;
 
   /* Color styles */
   --black: rgba(44, 44, 44, 1);
@@ -33,45 +33,47 @@
   --button---primary: 14px;
 }
 
-body{
+body {
   /* font-family: "Open Sans", sans-serif;
   font-size: var(--base-font); */
-  font: var(--base-font)/var(--base-unit) "Open Sans", sans-serif;
+  font:
+    var(--base-font)/var(--base-unit) "Open Sans",
+    sans-serif;
 }
 
 /* 폰트 위계 */
-.text-heading-xl{
+.text-heading-xl {
   font-size: 55px;
-  line-height: calc(var(--base-unit) * 3 );
+  line-height: calc(var(--base-unit) * 3);
   color: var(--hero--title);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.text-heading-s{
+.text-heading-s {
   font-size: 24px;
   line-height: var(--base-unit);
 }
-.text-body-l{
+.text-body-l {
   font-size: 32px;
-  line-height: calc(var(--base-unit) * 2 );
+  line-height: calc(var(--base-unit) * 2);
   font-weight: 300;
 }
-.text-body-m{
+.text-body-m {
   font-size: 16px;
   line-height: var(--base-unit);
 }
-.text-body-m-plus{
+.text-body-m-plus {
   font-size: 18px;
   line-height: var(--base-unit);
 }
-.text-nav{
+.text-nav {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 /* 링크 버튼 */
-.btn{
+.btn {
   height: 39px;
   background-color: var(--super--light--gray);
   border-radius: 3px;
@@ -84,28 +86,28 @@ body{
   gap: 5px;
   text-transform: uppercase;
 }
-.btn .material-icons{
+.btn .material-icons {
   font-size: 14px;
 }
-.btn-primary{
+.btn-primary {
   background: var(--primary);
   color: var(--secondary);
 }
-.btn.big{
+.btn.big {
   height: calc(var(--base-unit) * 2);
   padding: 0 30px;
 }
 /* 폼 요소 */
-.hero{
+.hero {
   background: var(--hero);
 }
-form{
-  width: 350px;  
+form {
+  width: 350px;
   display: flex;
-  flex-direction:column;
-  gap:10px;
+  flex-direction: column;
+  gap: 10px;
 }
-form .field{
+form .field {
   height: calc(var(--base-unit) * 2);
   background: var(--white);
   border-radius: 3px;
@@ -114,14 +116,14 @@ form .field{
   align-items: center;
   color: var(--light--gray);
 }
-form .field input{
+form .field input {
   font-style: italic;
-  color: var(--black)
+  color: var(--black);
 }
-form .field input::placeholder{
-  color:var(--light--gray);
+form .field input::placeholder {
+  color: var(--light--gray);
 }
-form button{
+form button {
   height: calc(var(--base-unit) * 2);
   display: flex;
   align-items: center;
@@ -135,40 +137,80 @@ form button{
   font-weight: bold;
 }
 /* 레이아웃 */
-.container{
+.container {
   width: 1272px;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.inner-pd{
+.inner-pd {
   padding: calc(var(--base-unit) * 3);
 }
-.inner-top-pd{
+.inner-top-pd {
   padding-top: calc(var(--base-unit) * 3);
 }
 
-hr{
-  border:none;
+hr {
+  border: none;
   height: 1px;
   background: var(--super--light--gray);
 }
 
 /* 헤더 */
-body > header{
+body > header {
   background: var(--white);
   padding: var(--base-unit) 0;
-  box-shadow: 0 4px 5px rgba(0,0,0,.1);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hidden{
+.hidden {
   position: absolute;
   clip-path: inset(50%);
-  width: 1px; height: 1px;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
-header nav ul{
+header nav ul {
   gap: 10px;
 }
 
-header nav ul li:first-child{
+header nav ul li:first-child {
   margin-right: 40px;
+}
+
+/* 슬라이드 */
+.slidewrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slidecontainer {
+  width: 300%;
+  display: flex;
+  transition: 0.3s ease-out;
+}
+
+.slidecontainer li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--base-unit);
+}
+
+.slidewrapper button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light--gray);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slidewrapper button.prev {
+  left: 0;
+}
+.slidewrapper button.next {
+  right: 0;
 }
